@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,10 +72,11 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">This is a web site!</h1>
-      <p class="lead text-muted">Spend more of your life doing this now.</p>
+      <h1 class="jumbotron-heading">DRESS TO DISAPPEAR</h1>
+      <p class="lead text-muted">The first album by Apprehenchmen</p>
       <p>
-        <a href="http://google.com" class="btn btn-primary my-2">Kill Self</a>
+        <img href="apprehenchmen.bandcamp.com" img src='{% static 'cover.jpg' %}' width=500>
+        <h2><a href="apprehenchmen.bandcamp.com" class="btn btn-primary my-2">Listen / Buy</a></h2>
       </p>
     </div>
   </section>
