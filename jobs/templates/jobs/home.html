@@ -74,7 +74,7 @@
       <h1 class="jumbotron-heading">This is a web site!</h1>
       <p class="lead text-muted">Spend more of your life doing this now.</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Kill Self</a>
+        <a href="http://google.com" class="btn btn-primary my-2">Kill Self</a>
       </p>
     </div>
   </section>
@@ -83,11 +83,11 @@
     <div class="container">
 
       <div class="row">
-        {% for job in jobs.all %}
-
+      {%for job in jobs.all%}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top"  src = {{job.image.url}}  width="100%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Title</title><rect width="100%" height="100%" fill="#55595c"/></svg>
+            <img class="bd-placeholder-img card-img-top"  src = {{job.image.url}}   xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>
+            </title><rect width="100%" height="100%" fill="#55595c"/></svg>
 
             <div class="card-body">
               <p class="card-text">{{job.summary}}</p>
@@ -99,8 +99,7 @@
             </div>
           </div>
         </div>
-        {% endfor %}
-
+      {%endfor%}
 
 </main>
 
