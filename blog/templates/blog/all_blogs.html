@@ -69,19 +69,13 @@
 
 <main role="main">
   <div class="container">
-  <h1 class="text-center pt-3">Welcome to Andy's Blog</h1>
+  <div class="row">
+  <h1 class="text-center pt-3">The Lyrics</h1>
   <br />
   <br />
-  <h2>Latest Posts</h2>
-  <br />
-  {%for post in blog_posts.all%}
+  {%for song in lyrics.all%}
     <div class="col-md-4">
-    <h3><a href="">{{post.title}}</h3></a>
-    <img class="img-fluid"  src = {{post.image.url}}  width="100%" height="300"></img>
-
-    <h6>{{post.pub_date_pretty}}</h6>
-
-    {{post.summary}}
+    <h3><a href="">{{lyrics.title}}</h3></a>
     <br />
     <br />
     <br />
@@ -89,6 +83,7 @@
     </div>
   {%endfor%}
   </div>
+</div>
 
 </main>
 

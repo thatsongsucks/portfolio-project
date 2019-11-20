@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <h1 class="text-center pt-3">Lyrics</h1>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+{%for song in lyrics.all%}
+<div class="row">
+  <h3><a href="{% url 'detail' song.title %}">{{song.title}}</h3></a>
+  <br />
+  <br />
+</div>
+{%endfor%}
+</div>
+{% endblock %}
