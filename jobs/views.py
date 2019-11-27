@@ -11,9 +11,9 @@ def contact(request):
             person.name = request.POST['name']
             person.email = request.POST['email']
             person.save()
-            return render(request, 'contact.html', {'success':"You've been added to the Apprehenchmen mailing list!  You won't regret this."})
+            return render(request, 'jobs/contact.html', {'success':"You've been added to the Apprehenchmen mailing list!  You won't regret this."})
         else:
-            return render(request, 'contact.html', {'failure':'Enter your name and your email, beloved site user.'})
+            return render(request, 'jobs/contact.html', {'failure':'Enter your name and your email, beloved site user.'})
     else:
         return render(request, 'jobs/contact.html')
 
