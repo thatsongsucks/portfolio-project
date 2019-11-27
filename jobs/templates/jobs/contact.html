@@ -10,11 +10,14 @@
 <div class='row pb-3'>
   <h5><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h5>
 </div>
-<div class='row pb-3'>
+<br><br>
+<div class='row justify-content-left'>
   <h4>Join the Apprehenchmen Mailing List!</h4>
+</div>
+<div class='row justify-content-left'>
   <p>We'll tell you about new shows and albums, but not unless it's something actually cool.</p>
 </div>
-<div class='row pb-3'>
+<div class='row justify-content-left'>
   {% if failure %}
   <p>
   {{ failure }}
@@ -24,19 +27,18 @@
   {{ success }}
   </p>
   {% endif %}
-<br><br>
+</div>
+<br>
+<div class='row justify-content-left'>
     <form method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
 
     {% csrf_token %}
 
-    Your name:
-    <br />
-    <input type="text" name="name" />
-    <br /><br />
-    Your email address:
-    <br />
-    <input type="text" name="email" />
-    <br /><br />
+    <p align='left'>Your name:
+    <input type="text" name="name" /></p>
+    <p align='left'>Your email address:
+    <input type="text" name="email" /></p>
+    <br>
     <input class="btn btn-primary" type='submit' value="Get on the list" />
 
     </form>
