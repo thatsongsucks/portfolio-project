@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<img src='{{ url "lyrics.album.image" }}' />
 <h1>{{ lyrics.title }}</h1>
 <p>{{ lyrics.body | linebreaks }}</p>
 

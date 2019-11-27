@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load staticfiles %}
 <div class="row">
   <h1 class="text-center pt-3">Lyrics</h1>
   <br />
@@ -7,12 +8,17 @@
   <br />
   <br />
 </div>
+<div class='row'>
+  <h3>Dress to Disappear</h3>
+</div>
+<div class='row'>
+  <img src='{% static "cover.jpg"}' />
+</div>
 {%for song in lyrics.all%}
 <div class="row">
-  <h3><a href="{% url 'detail' song.title %}">{{song.title}}</h3></a>
+  <h5><a href="{% url 'detail' song.title %}">{{song.title}}</a></h5>
   <br />
   <br />
 </div>
 {%endfor%}
-</div>
 {% endblock %}
