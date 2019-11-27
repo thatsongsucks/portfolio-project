@@ -5,7 +5,7 @@
 </div>
 <br>
 <div class='row pb-3'>
-  <a href='http://instagram.com/apprehenchmen'<button class='btn btn-warning'>Instagram</button></a>
+  <a href='http://instagram.com/apprehenchmen'><button class='btn btn-danger'>Instagram</button></a>
 </div>
 <div class='row pb-3'>
   <h5><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h5>
@@ -17,15 +17,14 @@
 <div class='row justify-content-left'>
   <p>We'll tell you about new shows and albums, but not unless it's something actually cool.</p>
 </div>
-<div class='row justify-content-left'>
   {% if failure %}
-  <p>
+<div class="alert alert-danger" role="alert">
   {{ failure }}
-  </p>
+</div>
   {% elif success %}
-  <p>
+<div class="alert alert-success" role="alert">
   {{ success }}
-  </p>
+</div>
   {% endif %}
 </div>
 <br>
