@@ -11,6 +11,12 @@ class Show(models.Model):
     pub_date = models.DateTimeField()
     flyer = models.ImageField(upload_to='images')
 
+    def __str__(self):
+        return self.date
+
 class MailingListPerson(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
+
+    def __str__(self):
+        return self.name
