@@ -1,13 +1,21 @@
-from django.shortcuts import render
-from .models import Job
+from django.shortcuts import render, redirect
+from .models import MailingListPerson
 
 def home(request):
-    jobs = Job.objects
-    return render(request, 'jobs/home.html', {'jobs':jobs})
-
+    return render(request, 'jobs/home.html')
 
 def contact(request):
-    return render(request, 'jobs/contact.html')
+    if request.method == 'POST':
+        if request.POST['name'] and request.POST['email']:
+            person = MailingListPerson()
+            person.name = request.POST['name']
+            person.email = request.POST['email']
+            person.save()
+            return render(request, 'contact.html', {'success':"You've been added to the Apprehenchmen mailing list!  You won't regret this."})
+        else:
+            return render(request, 'contact.html', {'failure':'Enter your name and your email, beloved site user.'})
+    else:
+        return render(request, 'jobs/contact.html')
 
 def shows(request):
     return render(request, 'jobs/shows.html')

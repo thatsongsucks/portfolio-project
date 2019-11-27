@@ -3,14 +3,42 @@
 <div class='row'>
   <h1>Get in Touch</h1>
 </div>
-<br><br>
-<div class='row pb-3'>
-  <button class='btn btn-warning' href='http://instagram.com/apprehenchmen'>Instagram</button>
-</div>
 <br>
 <div class='row pb-3'>
-  <h4>Email: <a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h4>
+  <a href='http://instagram.com/apprehenchmen'<button class='btn btn-warning'>Instagram</button></a>
 </div>
+<div class='row pb-3'>
+  <h5><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h5>
+</div>
+<div class='row pb-3'>
+  <h4>Join the Apprehenchmen Mailing List!</h4>
+  <p>We'll tell you about new shows and albums, but not unless it's something actually cool.</p>
+</div>
+<div class='row pb-3'>
+  {% if failure %}
+  <p>
+  {{ failure }}
+  </p>
+  {% elif success %}
+  <p>
+  {{ success }}
+  </p>
+  {% endif %}
+<br><br>
+    <form method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
 
+    {% csrf_token %}
 
+    Your name:
+    <br />
+    <input type="text" name="name" />
+    <br /><br />
+    Your email address:
+    <br />
+    <input type="text" name="email" />
+    <br /><br />
+    <input class="btn btn-primary" type='submit' value="Get on the list" />
+
+    </form>
+</div>
 {% endblock %}

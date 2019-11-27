@@ -10,3 +10,7 @@ class Show(models.Model):
     date = models.CharField(max_length=200)
     pub_date = models.DateTimeField()
     flyer = models.ImageField(upload_to='images')
+
+class MailingListPerson(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
