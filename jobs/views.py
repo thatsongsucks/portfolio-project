@@ -19,3 +19,6 @@ def contact(request):
 
 def shows(request):
     return render(request, 'jobs/shows.html')
+
+def about(request):
+    return render(request, 'jobs/about.html')
