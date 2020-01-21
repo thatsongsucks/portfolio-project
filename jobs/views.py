@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import MailingListPerson
+from .models import MailingListPerson, Show
 
 def home(request):
     return render(request, 'jobs/home.html')
@@ -18,7 +18,8 @@ def contact(request):
         return render(request, 'jobs/contact.html')
 
 def shows(request):
-    return render(request, 'jobs/shows.html')
+    shows=Show.objects.order_by('-date')
+    return render(request, 'jobs/shows.html', {'shows':shows})
 
 def about(request):
     return render(request, 'jobs/about.html')
