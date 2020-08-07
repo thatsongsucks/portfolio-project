@@ -23,3 +23,6 @@ def shows(request):
 
 def about(request):
     return render(request, 'jobs/about.html')
+
+def harp(request):
+    return render(request, 'jobs/harp.html')
