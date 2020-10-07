@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import MailingListPerson, Show
+from .models import MailingListPerson, Show, Demo
 
 def home(request):
     return render(request, 'jobs/home.html')
@@ -26,3 +26,7 @@ def about(request):
 
 def harp(request):
     return render(request, 'jobs/harp.html')
+
+def demos(request):
+    demos=Demo.objects.order_by('-date_modified')
+    return render(request, 'jobs/demos.html', {'demos':demos})

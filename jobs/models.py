@@ -10,7 +10,7 @@ class Show(models.Model):
     bands = models.CharField(max_length=200)
     date = models.CharField(max_length=200)
     time = models.TimeField()
-    flyer = models.ImageField(upload_to='images')
+    flyer = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.date
@@ -21,3 +21,8 @@ class MailingListPerson(models.Model):
 
     def __str__(self):
         return self.name
+
+class Demo(models.Model):
+    name = models.CharField(max_length=100)
+    mp3 = models.FileField(upload_to='demos/')
+    date_modified = models.DateTimeField(auto_now=True)

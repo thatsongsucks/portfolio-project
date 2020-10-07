@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <h1 class="text-center pt-3">DEMOS</h1>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+{%for demo in demos.all%}
+<p>
+<div class="row">
+    <div class='col-4'>
+        <a href= '{{ demo.mp3.url }}'>'{{ demo.name }}''</a>
+    </div>
+    <div class='col 8'>
+           |    updated on {{ demo.date_modified }}
+    </div>
+</div>
+</p>
+{%endfor%}
+{% endblock %}
