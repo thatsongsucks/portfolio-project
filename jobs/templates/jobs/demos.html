@@ -7,18 +7,16 @@
   <br />
   <br />
 </div>
-<h3>
 {%for demo in demos.all%}
 <p>
-<div class="row">
-    <div class='col-2'>
-        <a href= '{{ demo.mp3.url }}'>{{ demo.name }}</a>
+<div class="row pb-3">
+    <div class='col-2 float-right pr-1'>
+        <h3><a href= '{{ demo.mp3.url }}'>{{ demo.name }}</a></h3>
     </div>
     <div class='col-10'>
-           |    updated on {{ demo.date_modified }}
+        <h5>   |    updated on {{ demo.date_modified }}</h5>
     </div>
 </div>
 </p>
 {%endfor%}
-</h3>
 {% endblock %}
