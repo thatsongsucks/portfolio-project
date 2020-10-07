@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row">
-  <h1 class="text-center pt-3">DEMOS</h1>
+  <h1 class="text-center pt-3">demos</h1>
   <br />
   <br />
   <br />
   <br />
 </div>
+<h3>
 {%for demo in demos.all%}
 <p>
 <div class="row">
-    <div class='col-4'>
-        <a href= '{{ demo.mp3.url }}'>'{{ demo.name }}''</a>
+    <div class='col-2'>
+        <a href= '{{ demo.mp3.url }}'>{{ demo.name }}</a>
     </div>
-    <div class='col 8'>
+    <div class='col-2'>
            |    updated on {{ demo.date_modified }}
     </div>
 </div>
 </p>
 {%endfor%}
+</h3>
 {% endblock %}

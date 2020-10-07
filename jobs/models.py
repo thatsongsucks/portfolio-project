@@ -26,3 +26,6 @@ class Demo(models.Model):
     name = models.CharField(max_length=100)
     mp3 = models.FileField(upload_to='demos/')
     date_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
