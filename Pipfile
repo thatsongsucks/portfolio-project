@@ -13,3 +13,5 @@ pytz = "==2019.2"
 sqlparse = "==0.3.0"
 
 
+[requires]
+python_version = "3.7"

@@ -1,24 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row">
-  <h1 class="text-center pt-3">demos</h1>
-  <br />
-  <br />
-  <br />
-  <br />
+    <h1 class="text-center pt-3">Demos</h1>
+    <br />
+    <br />
+    <br />
+    <br />
 </div>
 {%for demo in demos.all%}
-<p>
-<div class="row pb-3">
-    <div class='col-1'>
-        <div class="row pr-3">
-            <h3><a href= '{{ demo.mp3.url }}' target="_blank">{{ demo.name }}</a></h3>
+<div class="row">
+    <div class="col-lg-10">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class='col-4 text-right p-2 border border-success m-2'>
+                <h3 class=><a href='{{ demo.mp3.url }}' target="_blank">{{ demo.name }}</a></h3>
+            </div>
+            <div class='col p-2 border border-success m-2'>
+                <div class='text-left'>
+                    <h5>
+                        updated on {{ demo.date_modified }}
+                    </h5>
+                </div>
+            </div>
         </div>
     </div>
-    <div class='col-10'>
-        <div class='text-left'><h5 class='align-text-bottom'>   |    updated on {{ demo.date_modified }}</h5></div>
-    </div>
 </div>
-</p>
 {%endfor%}
 {% endblock %}

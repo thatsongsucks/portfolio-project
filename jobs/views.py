@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import MailingListPerson, Show, Demo
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def home(request):
     return render(request, 'jobs/home.html')
@@ -29,4 +32,14 @@ def harp(request):
 
 def demos(request):
     demos=Demo.objects.order_by('-date_modified')
+    name_list=[]
+    for demo in demos:
+        name_list.append(demo.mp3.name)
+    current_files = os.listdir(path=os.path.join(BASE_DIR, 'media/demos'))
+    fixed_current_files = []
+    for item in current_files:
+        fixed_current_files.append('demos/' + item)
+    for file in fixed_current_files:
+        if file not in name_list:
+            os.remove(os.path.join(BASE_DIR, f'media/{file}'))
     return render(request, 'jobs/demos.html', {'demos':demos})
