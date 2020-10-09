@@ -1,31 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="row">
+<div class="row mb-5">
   <h1 class="text-center pt-3">UPCOMING SHOWS</h1>
-  <br />
-  <br />
-  <br />
-  <br />
+</div>
+<div class="row mb-5">
+  <div class="col-fluid alert-success p-3">
+    <h4>This space will have shows but there aren't any right now</h4>
+  </div>
+</div>
+<div class="row mb-5">
+  <H1>PAST SHOWS</H1>
 </div>
 {%for show in shows.all%}
 <p>
 <div class="row">
   <div class="col-5">
-      <div class="row text-left">
-          <h2>{{ show.date }}</2>
-          <br>
-      </div>
-      <div class="row text-left">
-        <h2><a href="{{ show.venue_url }}" target='_blank'>{{ show.venue }}</a></h2>
+    <div class="row text-left">
+      <h2>{{ show.date }}</2>
         <br>
-      </div>
-      <div class="row text-left">
-        <h4>{{ show.time }}</h4>
-      </div>
-      <br><br>
-      <div class="row text-left">
-        <h4>with {{ show.bands }}</h4>
-      </div>
+    </div>
+    <div class="row text-left">
+      <h2><a href="{{ show.venue_url }}" target='_blank'>{{ show.venue }}</a></h2>
+      <br>
+    </div>
+    <div class="row text-left">
+      <h4>{{ show.time }}</h4>
+    </div>
+    <br><br>
+    <div class="row text-left">
+      <h4>with {{ show.bands }}</h4>
+    </div>
   </div>
   <div class='col-7'>
     <img src='{{ show.flyer.url }}' width='100%' />
