@@ -17,13 +17,13 @@ let currentChord = [0, 2, 4];
 
 // Start the audio context
 
-// const ACStart = async () => {
-//     await Tone.start();
-//     console.log('Audio is Ready');
-//     audioStarted = true;
-// };
+const ACStart = async () => {
+     await Tone.start();
+     console.log('Audio is Ready');
+     audioStarted = true;
+ };
 
-
+document.addEventListener('click', ACStart)
 
 //Create synths.
 
