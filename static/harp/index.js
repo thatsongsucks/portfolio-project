@@ -23,7 +23,7 @@ const ACStart = async () => {
     audioStarted = true;
 };
 
-document.querySelector('body').addEventListener('click', () => {
+document..addEventListener('DOMContentLoaded', () => {
     if (!audioStarted) {
         ACStart();
     }
