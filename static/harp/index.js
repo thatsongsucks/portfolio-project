@@ -20,7 +20,6 @@ let currentChord = [0, 2, 4];
 const ACStart = async () => {
      await Tone.start();
      console.log('Audio is Ready');
-     audioStarted = true;
  };
 
 document.addEventListener('click', ACStart)
