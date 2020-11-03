@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load staticfiles %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harpist</title>
-    <link rel="stylesheet" href='{% static "harp/style.css" %}'>
+    <link rel="stylesheet" href='style.css'>
 </head>
 
 <body>
     <header>
+
         <div class="subheader">
+
+            <div class="thingy oct">
+                Amount of Octaves:
+                <div id='octamount'>
+                </div>
+
+                <div class="addoctave">
+                    <div class="changeoctamount" id='minus'>
+                        -
+                    </div>
+                    <div class="changeoctamount" id='plus'>
+                        +
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="thingy slidecontainer">
+            <p>Adjust Speed:<span id="speed"></span></p>
+            <input type="range" min="10" max="200" value="100" class="slider" id="speedslider">
+        </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="subheader">
+            <div class="thingy revselect">
+                Ascending
+            </div>
+
+            <div class="thingy doubleselect">
+                Single Stroke
+            </div>
+            <div class="thingy loopselect">
+                No Loop
+            </div>
             <div class='thingy octselect'>
                 <label for="octave">Starting Octave:</label>
 
@@ -25,43 +66,6 @@
                 </select>
 
             </div>
-            <div class="thingy revselect">
-                Ascending
-            </div>
-
-            <div class="thingy slidecontainer">
-                <p>Adjust Speed:<span id="speed"></span></p>
-                <input type="range" min="10" max="200" value="100" class="slider" id="speedslider">
-            </div>
-        </div>
-
-        <div class="subheader logo">
-
-        </div>
-        <div class="subheader">
-            <div class="thingy oct">
-                Amount of Octaves:
-                <div id='octamount'>
-
-                </div>
-                <div class="addoctave">
-                    <div class="changeoctamount" id='minus'>
-                        -
-                    </div>
-                    <div class="changeoctamount" id='plus'>
-                        +
-                    </div>
-                </div>
-            </div>
-
-            <div class="thingy doubleselect">
-                Single Stroke
-            </div>
-            <div class="thingy loopselect">
-                No Loop
-            </div>
-
-
         </div>
 
 
@@ -78,8 +82,8 @@
     <div class="container error">
 
     </div>
-    <script type = 'module' src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.42/Tone.js'></script>
-    <script type = 'module' src='{% static "harp/index.js" %}'></script>
+    <script type='module' src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.42/Tone.js'></script>
+    <script type='module' src='index.js'></script>
 </body>
 
 </html>

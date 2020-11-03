@@ -30,13 +30,12 @@ document.querySelector('body').addEventListener('click', () => {
 });
 
 //Create synths.
-const verb = new Tone.Reverb({'decay':2.5}).toDestination();
-const synth1 = new Tone.PolySynth(Tone.FMSynth).connect(verb);
-const synth2 = new Tone.PolySynth(Tone.FMSynth).connect(verb);
+
+const synth1 = new Tone.PolySynth(Tone.FMSynth).toDestination();
+const synth2 = new Tone.PolySynth(Tone.FMSynth).toDestination();
 synth1.set({'envelope': {'release':1.2, 'sustain':0.3}});
 synth2.set({'envelope': {'release':1.2, 'sustain':0.3}});
-synth1.volume.value = 10;
-synth2.volume.value = 10;
+
 
 
 

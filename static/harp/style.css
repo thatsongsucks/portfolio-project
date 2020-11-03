@@ -11,6 +11,7 @@ header {
     box-sizing: border-box;
     padding: 10px 20px;
     display: flex;
+    justify-content: space-between;
     background-image: url('images/harp.png');
     background-position: top;
     background-repeat: no-repeat;
@@ -23,7 +24,9 @@ h1 {
 }
 
 .subheader {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .changeoctamount {
@@ -95,12 +98,13 @@ h1 {
 }
 
 .slider {
-    width: 230px;
+    width: 90%;
 }
 
 .slidecontainer {
     width: 250px;
     color: black;
+    height: 100px;
 }
 
 .error {
@@ -156,3 +160,71 @@ h1 {
     display: flex;
     justify-content: center;
 } */
+
+@media (max-width: 768px) {
+
+body {
+    line-height: .8rem;
+    font-size: xx-small;
+}
+
+.container {
+    flex-direction: column;
+    width: fit-content;
+}
+
+header {
+    width: auto;
+    flex-direction: column;
+    background-image: none;   
+    min-height: min-content;
+}
+
+.subcontainer {
+    width: fit-content;
+    padding: 1px;
+    margin: 0px;
+
+}
+
+.subheader {
+    width: auto;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+}
+
+.chord {
+    border: 2px solid;
+    border-radius: 100px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .2rem;
+}
+
+.thingy {
+    text-align: center;
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+    height: fit-content;
+}
+
+.slidecontainer {
+    width: 60%;
+}
+
+.slider {
+    width: 90%;
+
+}
+
+.chordball {
+    margin: ;
+}
+
+}
