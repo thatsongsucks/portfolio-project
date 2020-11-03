@@ -1,4 +1,4 @@
-//import * as Tone from "Tone";
+import * as Tone from "Tone";
 
 // Musical info and initializing variables
 
@@ -22,7 +22,6 @@ const ACStart = async () => {
      console.log('Audio is Ready');
  };
 
-document.addEventListener('click', ACStart)
 
 //Create synths.
 
@@ -53,6 +52,7 @@ allNotes.forEach(n => {
 //Add Events to Chord Play Buttons
 
 document.querySelector('.container').addEventListener('click', e => {
+
     if (e.target.matches('.chord')) {
         let id = e.target.id;
         console.log(id);
@@ -260,7 +260,6 @@ const playChord = (startTime = 0) => {
             try {
                 synth1.triggerAttackRelease(half1[i], '4n');  
                 console.log(`synth 1 plays ${half1[i]}`); 
-                synth1.context.resume();   
             } catch (err) {
                 console.log('Going Haywire!');                
                 if (!haywire) {
@@ -273,8 +272,7 @@ const playChord = (startTime = 0) => {
             Tone.Transport.schedule((time) => {
                 try {
                     synth2.triggerAttackRelease(half2[i], '4n');  
-                    console.log(`synth 2 plays ${half2[i]}`);  
-                    synth2.context.resume();     
+                    console.log(`synth 2 plays ${half2[i]}`);   
                 } catch (err) {
                     console.log('Going Haywire!');                
                     if (!haywire) {
