@@ -109,9 +109,7 @@ h1 {
 
 .error {
     background-color: rgb(250, 249, 196);
-    min-height: 300px;
-    padding: 25px;
-    box-sizing: border-box;
+
 }
 
 .error-message {
