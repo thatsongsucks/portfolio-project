@@ -1,4 +1,4 @@
-// import * as Tone from "Tone";
+//import * as Tone from "Tone";
 
 // Musical info and initializing variables
 
@@ -52,7 +52,6 @@ allNotes.forEach(n => {
 //Add Events to Chord Play Buttons
 
 document.querySelector('.container').addEventListener('click', e => {
-
     if (e.target.matches('.chord')) {
         let id = e.target.id;
         console.log(id);
