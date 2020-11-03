@@ -164,8 +164,8 @@ h1 {
 @media (max-width: 1000px) {
 
 body {
-    line-height: .8rem;
-    font-size: xx-small;
+    line-height: 1rem;
+    font-size: small;
 }
 
 .container {
@@ -179,6 +179,7 @@ header {
     flex-direction: column;
     background-image: none;   
     min-height: min-content;
+    padding: 0;
 }
 
 .subcontainer {
@@ -196,12 +197,12 @@ header {
 .chord {
     border: 2px solid;
     border-radius: 100px;
-    width: 64px;
-    height: 64px;
+    width: 73px;
+    height: 73px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: .2rem;
+    font-size: 1.5rem;
 }
 
 .thingy {
