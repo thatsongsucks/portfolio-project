@@ -34,11 +34,6 @@ synth1.set({'envelope': {'release':1.2, 'sustain':0.3}});
 synth2.set({'envelope': {'release':1.2, 'sustain':0.3}});
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    Tone.start();
-    console.log('Audio is Ready');
-
-});
 
 //Generate Chord Buttons
 
@@ -265,7 +260,8 @@ const playChord = (startTime = 0) => {
         Tone.Transport.schedule((time) => {
             try {
                 synth1.triggerAttackRelease(half1[i], '4n');  
-                console.log(`synth 1 plays ${half1[i]}`);    
+                console.log(`synth 1 plays ${half1[i]}`); 
+                synth1.context.resume();   
             } catch (err) {
                 console.log('Going Haywire!');                
                 if (!haywire) {
@@ -278,7 +274,8 @@ const playChord = (startTime = 0) => {
             Tone.Transport.schedule((time) => {
                 try {
                     synth2.triggerAttackRelease(half2[i], '4n');  
-                    console.log(`synth 2 plays ${half2[i]}`);      
+                    console.log(`synth 2 plays ${half2[i]}`);  
+                    synth2.context.resume();     
                 } catch (err) {
                     console.log('Going Haywire!');                
                     if (!haywire) {
