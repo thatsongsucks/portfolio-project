@@ -13,20 +13,20 @@ let haywire = false;
 let loop = false;
 let currentLoop;
 let currentChord = [0, 2, 4];
-let audioStarted = false;
+
 
 // Start the audio context
 
-const ACStart = async () => {
-    await Tone.start();
-    console.log('Audio is Ready');
-    audioStarted = true;
-};
+// const ACStart = async () => {
+//     await Tone.start();
+//     console.log('Audio is Ready');
+//     audioStarted = true;
+// };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (!audioStarted) {
-        ACStart();
-    }
+    Tone.start();
+    console.log('Audio is Ready');
+
 });
 
 //Create synths.
