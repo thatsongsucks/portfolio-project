@@ -171,6 +171,7 @@ body {
 .container {
     flex-direction: column;
     width: fit-content;
+    margin: 0px;
 }
 
 header {
@@ -181,9 +182,8 @@ header {
 }
 
 .subcontainer {
-    width: fit-content;
-    padding: 1px;
-    margin: 0px;
+    width: auto;
+    padding: 0 12px;
 
 }
 
