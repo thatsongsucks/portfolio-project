@@ -22,6 +22,7 @@ const ACStart = async () => {
      console.log('Audio is Ready');
  };
 
+document.addEventListener('click', ACStart)
 
 //Create synths.
 
@@ -259,6 +260,7 @@ const playChord = (startTime = 0) => {
             try {
                 synth1.triggerAttackRelease(half1[i], '4n');  
                 console.log(`synth 1 plays ${half1[i]}`); 
+
             } catch (err) {
                 console.log('Going Haywire!');                
                 if (!haywire) {
@@ -271,7 +273,8 @@ const playChord = (startTime = 0) => {
             Tone.Transport.schedule((time) => {
                 try {
                     synth2.triggerAttackRelease(half2[i], '4n');  
-                    console.log(`synth 2 plays ${half2[i]}`);   
+                    console.log(`synth 2 plays ${half2[i]}`);  
+  
                 } catch (err) {
                     console.log('Going Haywire!');                
                     if (!haywire) {
