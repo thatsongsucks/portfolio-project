@@ -1,4 +1,4 @@
-import * as Tone from "Tone";
+// import * as Tone from "Tone";
 
 // Musical info and initializing variables
 
