@@ -23,11 +23,7 @@ let currentChord = [0, 2, 4];
 //     audioStarted = true;
 // };
 
-document.addEventListener('DOMContentLoaded', () => {
-    Tone.start();
-    console.log('Audio is Ready');
 
-});
 
 //Create synths.
 
@@ -38,7 +34,11 @@ synth1.set({'envelope': {'release':1.2, 'sustain':0.3}});
 synth2.set({'envelope': {'release':1.2, 'sustain':0.3}});
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    Tone.start();
+    console.log('Audio is Ready');
 
+});
 
 //Generate Chord Buttons
 
